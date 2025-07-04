@@ -27,6 +27,7 @@ SUBDIRS=util include lib \
 	plugins/kdcpolicy/test \
 	plugins/preauth/otp \
 	plugins/preauth/pkinit \
+	plugins/preauth/fido_jwt \
 	plugins/preauth/spake \
 	plugins/preauth/test \
 	plugins/tls/k5tls \

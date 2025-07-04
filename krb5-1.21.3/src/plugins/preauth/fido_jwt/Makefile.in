@@ -1,0 +1,21 @@
+mydir=plugins$(S)preauth$(S)fido_jwt
+BUILDTOP=$(REL)..$(S)..$(S)..
+MODULE_INSTALL_DIR = $(KRB5_PA_MODULE_DIR)
+
+LIBBASE=fido_jwt
+LIBMAJOR=0
+LIBMINOR=0
+RELDIR=../plugins/preauth/fido_jwt
+SHLIB_EXPDEPS=$(KRB5_BASE_DEPLIBS)
+SHLIB_EXPLIBS=$(KRB5_BASE_LIBS)
+
+STLIBOBJS=clnt.o kdc.o
+
+SRCS= $(srcdir)/clnt.c $(srcdir)/kdc.c
+
+all-unix: all-liblinks
+install-unix: install-libs
+clean-unix:: clean-liblinks clean-libs clean-libobjs
+
+@libnover_frag@
+@libobj_frag@
