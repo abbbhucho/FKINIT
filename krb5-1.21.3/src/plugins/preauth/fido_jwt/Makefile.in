@@ -9,9 +9,9 @@ RELDIR=../plugins/preauth/fido_jwt
 SHLIB_EXPDEPS=$(KRB5_BASE_DEPLIBS)
 SHLIB_EXPLIBS=$(KRB5_BASE_LIBS)
 
-STLIBOBJS=clnt.o kdc.o
+STLIBOBJS=clnt.o kdc.o realm_util.o
 
-SRCS= $(srcdir)/clnt.c $(srcdir)/kdc.c
+SRCS= $(srcdir)/clnt.c $(srcdir)/kdc.c  $(srcdir)/realm_util.c
 
 all-unix: all-liblinks
 install-unix: install-libs
